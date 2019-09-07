@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:padding="5dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.sugeng.skripsiku.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search"
+        android:imeOptions="actionSearch"
+        android:inputType="text" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <GridView
+            android:id="@+id/gridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="3dp"
+            android:numColumns="1"
+            android:verticalSpacing="7dp">
+
+        </GridView>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/no_content"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
